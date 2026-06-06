@@ -2,19 +2,43 @@
 
 @theme {
   --font-sans: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: "Instrument Serif", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
-  --color-cream-50: #fffaf3;
-  --color-cream-100: #f8efe3;
-  --color-cream-200: #ead8c4;
+  --color-cream-50: #f8f7f3;
+  --color-cream-100: #f1efe9;
+  --color-cream-200: #e3dfd6;
 
-  --color-ink-900: #1f2933;
-  --color-ink-700: #3f4a56;
-  --color-ink-500: #6b7280;
+  --color-ink-900: #0e2a3b;
+  --color-ink-700: #2e4452;
+  --color-ink-500: #6a7b85;
 
-  --color-dental-blue: #5b8ea6;
-  --color-dental-blue-dark: #32657c;
-  --color-dental-green: #6fae9b;
-  --color-dental-gold: #c8a45d;
+  --color-dental-blue: #3d8b8a;
+  --color-dental-blue-dark: #0e2a3b;
+  --color-dental-green: #e6eeee;
+  --color-dental-gold: #b89968;
+
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #1faf54;
+}
+
+:root {
+  --bg: #f8f7f3;
+  --bg-tint: #f1efe9;
+  --teal-bg: #e6eeee;
+  --teal-bg-2: #d6e3e3;
+  --ink: #0e2a3b;
+  --ink-soft: #2e4452;
+  --muted: #6a7b85;
+  --line: #e3dfd6;
+  --line-soft: #ece9e1;
+  --teal: #3d8b8a;
+  --teal-dark: #2f6f6f;
+  --teal-soft: #b8d2d1;
+  --gold: #b89968;
+  --white: #ffffff;
+  --whatsapp: #25d366;
+  --whatsapp-dark: #1faf54;
 }
 
 * {
@@ -23,19 +47,27 @@
 
 html {
   scroll-behavior: smooth;
+  background: var(--bg);
+}
+
+[id] {
+  scroll-margin-top: 112px;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: #fffaf3;
-  color: #1f2933;
+  background: var(--bg);
+  color: var(--ink);
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
 }
 
@@ -44,4 +76,22 @@ input,
 textarea,
 select {
   font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.08;
+}
+
+p {
+  margin: 0;
 }
